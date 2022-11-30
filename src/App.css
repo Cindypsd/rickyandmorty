@@ -3,6 +3,7 @@
    background-image: url(./images/RnMBackground.jpeg);
    width: 100%;
    background-repeat: no-repeat;
+   background-attachment: fixed
 }
 
 .Logo{
