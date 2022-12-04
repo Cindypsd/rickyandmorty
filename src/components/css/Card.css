@@ -1,0 +1,41 @@
+.divCard {
+   box-shadow: 0 8px 16px 0 #17ff0f33, 0 6px 20px 0 rgba(0,0,0,0.19); 
+   border-radius: 10em;
+   width: 300px;
+   background-color: #15c665bb;
+   padding:.4em; 
+}
+
+.botonDelete{
+   background-color: #e3d425;
+   width:35px;
+   border-radius:.4em;
+   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
+   margin-bottom:.3em;
+   margin-top: 1em;
+   }
+
+
+.characterImg {
+   border-radius:8em;
+   width: 180px;
+   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
+   margin-bottom:.5em;}
+
+
+.characterName {
+   color: #142a05 ;
+   font-family: 'Cafe Francoise';
+   font-size: 1.7em;
+   margin:0em;}
+
+
+.characterInfo {
+   display:flex;
+   flex-direction: row;
+   justify-content:center;
+   font-family:'Anonymous Pro';
+   margin:auto;
+   color: #145006 ;
+   font-size: .7em;
+}

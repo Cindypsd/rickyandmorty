@@ -4,7 +4,8 @@ import styled from "styled-components";
 const StyledDiv = styled.div`
    display: flex;
    justify-content:space-evenly;
-   
+   flex-direction:row ;
+   flex-wrap: wrap;
 `
 
 
@@ -14,14 +15,15 @@ export default function Cards(props) {
       return (
       <StyledDiv>
          {
-            characters.map(({name,species,gender,image},index)=>{
+            characters.map(({name,species,gender,image,id},index)=>{
                return <Card 
                   key={index}
                   name={name}
                   species={species}
                   gender={gender}
                   image={image}
-                  onClose={() => window.alert("Emulamos que se cierra la card")}
+                  id={id}
+                  onClose={props.onClose}
                />
             })
          }

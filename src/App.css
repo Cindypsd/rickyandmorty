@@ -1,11 +1,12 @@
 .App {
    text-align: center;
    background-image: url(./images/RnMBackground.jpeg);
+   height: 1000px;
    width: 100%;
-   background-repeat: no-repeat;
-   background-attachment: fixed
+   
 }
 
 .Logo{
-   width: 600px;
+   width: 480px;
+   padding-bottom: 2em;
 }

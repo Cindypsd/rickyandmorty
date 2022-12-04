@@ -1,19 +1,36 @@
-import './App.css';
-import Card from './components/Card.jsx';
 import Cards from './components/Cards.jsx';
-import SearchBar from './components/SearchBar.jsx';
-import characters, { Rick } from './data.js';
-import styled from 'styled-components';
-
-const StyledDiv = styled.div`
-	display: flex;
-	justify-content: space-evenly;
-	margin-bottom: 2em;
-`;
+//import characters from './data.js';
+import { Nav } from './components/Nav';
+import './App.css';
+import { useState } from 'react';
+import { About } from './components/About.jsx';
+import { Detail } from './components/About.jsx';
 
 function App() {
+	const [characters, setCharacters] = useState([]);
+
+	function onSearch(character) {
+		fetch(`https://rickandmortyapi.com/api/character/${character}`)
+			.then(response => response.json())
+			.then(data => {
+				if (data.name) {
+					setCharacters(oldChars => [...oldChars, data]);
+				} else {
+					window.alert('No hay personajes con ese ID');
+				}
+			});
+	}
+
+	const onClose = event => {
+		setCharacters(
+			characters.filter(char => char.id !== Number(event.target.id))
+		);
+	};
+
 	return (
 		<div className='App' style={{ padding: '25px' }}>
+			<Nav onSearch={onSearch} />
+
 			<img
 				className='Logo'
 				src={require('./images/logoTransparente.png')}
@@ -21,21 +38,7 @@ function App() {
 			></img>
 
 			<div>
-				<SearchBar onSearch={characterID => window.alert(characterID)} />
-			</div>
-
-			<StyledDiv>
-				<Card
-					name={Rick.name}
-					species={Rick.species}
-					gender={Rick.gender}
-					image={Rick.image}
-					onClose={() => window.alert('Emulamos que se cierra la card')}
-				/>
-			</StyledDiv>
-
-			<div>
-				<Cards characters={characters} />
+				<Cards characters={characters} onClose={onClose} />
 			</div>
 		</div>
 	);
