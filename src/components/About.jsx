@@ -2,6 +2,9 @@ import React from 'react'
 
 export const About = () => {
   return (
-    <div>About</div>
+    <div>
+<h1>CINDY POSADA</h1>
+
+    </div>
   )
 }

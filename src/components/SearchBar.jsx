@@ -14,11 +14,10 @@ export default function SearchBar(props) {
    }
 
 
-
    return (
       <div>
          <input onChange={handleInputChange}  type='search' />
-         <button onClick={()=>props.onSearch(character)}>Agregar</button>
+         <button className='btnAgregar' onClick={()=>props.onSearch(character)}>Agregar</button>
       </div>
    );
 }

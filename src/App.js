@@ -4,7 +4,8 @@ import { Nav } from './components/Nav';
 import './App.css';
 import { useState } from 'react';
 import { About } from './components/About.jsx';
-import { Detail } from './components/About.jsx';
+import { Detail } from './components/Detail.jsx';
+import { Route } from 'react-router';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -29,17 +30,25 @@ function App() {
 
 	return (
 		<div className='App' style={{ padding: '25px' }}>
-			<Nav onSearch={onSearch} />
+			<Route path='/'>
+				<Nav onSearch={onSearch} />
 
-			<img
-				className='Logo'
-				src={require('./images/logoTransparente.png')}
-				alt='Logo Ricky Morty'
-			></img>
+				<img
+					className='Logo'
+					src={require('./images/logoTransparente.png')}
+					alt='Logo Ricky Morty'
+				></img>
+			</Route>
+			<Route path='/home'>
+				<div>
+					<Cards characters={characters} onClose={onClose} />
+				</div>
+			</Route>
+			<Route path='/about'>
+				<About />
+			</Route>
 
-			<div>
-				<Cards characters={characters} onClose={onClose} />
-			</div>
+			<Route path='/detail/:detailId' component={Detail} />
 		</div>
 	);
 }
