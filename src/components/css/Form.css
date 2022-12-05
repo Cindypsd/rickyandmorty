@@ -1,0 +1,67 @@
+.error{
+  border: 1px red;
+}
+
+
+.signInBox{
+  display:flex ;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20em;
+  width: 700px;
+  height: 700px;
+  background-image: url(/src/images/rick-and-morty-31013.png);
+  background-blend-mode: saturation;
+  
+}
+
+.signInBox:hover{
+  transform: scale(1.2);
+  transition: transform 2s;
+}
+
+.inputsElementos{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: auto ;
+  margin-top: 45%;
+}
+
+.btnSignIn{
+  background-color: #16c6ae;
+  width: 80px;
+  border-radius:.4em;
+  box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
+  margin-bottom:.5em;
+  margin-left:1em;
+  font-family:'Anonymous Pro';
+  padding:.5em;
+
+}
+
+.labelText{
+  font-family: 'Cafe Francoise';
+  font-weight: 600;
+}
+
+.textoH3{
+  font-family:'Cafe Francoise';
+  align-self: center;
+  margin-top: 0px;
+  font-size: 1em;
+  
+}
+
+.textoH1{
+  font-family:'Cafe Francoise';
+  align-self: center;
+
+  font-size: 3em;
+  color: #072f2a;
+  margin: auto;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px #0fa, 0 0 82px #0fa,0 0 92px #0fa;
+}
+
+
+

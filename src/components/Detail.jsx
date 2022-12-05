@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import './css/Detail.css'
 
 
 
@@ -32,14 +33,16 @@ export const Detail = () => {
  
   return (
   <>
-      <div>
-            <h1>{character.name}</h1>
-            <img className='' src={character.image} alt="" /> 
+      <div className='detailCard'>
+
+      <div className='detailCard'>
+            <h1 className='characterName'  >{character.name}</h1>
+            <img className='detailImg' src={character.image} alt="" /> 
+      </div>
             <h3>Estado: {character.status}</h3>
             <h3>Especie: {character.species}</h3>
-            
-           
       </div>
+          
 
          <Link to={`/home`} >
                <button className="btnNav">Return</button>

@@ -6,6 +6,7 @@ import { useState } from 'react';
 import { About } from './components/About.jsx';
 import { Detail } from './components/Detail.jsx';
 import { Route } from 'react-router';
+import { Form } from './components/Form.jsx';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -30,25 +31,32 @@ function App() {
 
 	return (
 		<div className='App' style={{ padding: '25px' }}>
-			<Route path='/'>
-				<Nav onSearch={onSearch} />
+			<Nav onSearch={onSearch} />
 
+			<Route exact path='/'>
+				<diV className='signBox'>
+					<Form />
+				</diV>
+			</Route>
+
+			<Route exact path='/home'>
 				<img
 					className='Logo'
 					src={require('./images/logoTransparente.png')}
 					alt='Logo Ricky Morty'
 				></img>
-			</Route>
-			<Route path='/home'>
 				<div>
 					<Cards characters={characters} onClose={onClose} />
 				</div>
 			</Route>
+
 			<Route path='/about'>
 				<About />
 			</Route>
 
-			<Route path='/detail/:detailId' component={Detail} />
+			<div className='divDetailCard'>
+				<Route path='/detail/:detailId' component={Detail} />
+			</div>
 		</div>
 	);
 }

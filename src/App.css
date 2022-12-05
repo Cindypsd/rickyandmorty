@@ -1,12 +1,25 @@
 .App {
    text-align: center;
-   background-image: url(./images/RnMBackground.jpeg);
+   background-image: url(./images/background-img.png);
    height: 1000px;
    width: 100%;
-   
 }
 
 .Logo{
    width: 480px;
    padding-bottom: 2em;
+}
+
+
+.signBox{
+   display: flex;
+   justify-content: center;
+   margin-top: 5%;
+}
+
+.divDetailCard{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
 }
