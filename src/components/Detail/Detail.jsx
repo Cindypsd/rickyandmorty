@@ -33,24 +33,50 @@ export const Detail = () => {
  
   return (
   <>
-      <div className='detailCard'>
-
-      <div className='detailCharacter'>
+      <div className='detailBox'>
+         
+         <div className='detailImgBox'>
             <h1 className='detailCharacterName'  >{character.name}</h1>
             <img className='detailImg' src={character.image} alt="" /> 
-      </div>
+         </div>
 
-      <div >
-            <h3 className='detailCharacterInfo'>Estado: {character.status} </h3>
-            
-            <h3 className='detailCharacterInfo'>  Especie: {character.species}</h3>
-      </div>
-      </div>
+      
+
+      <div className='detailTxtBox'>
+
           
+             <div>
+                <h3 className='infoTitle'>Specie:</h3>
+                <p className='detailTxt'>{character.species}</p>
+             </div>
+         
 
-         <Link to={`/home`} >
+            <div>
+               <h3 className='infoTitle'> Origin:</h3>
+               <p className='detailTxt'>  {character.origin && character.origin.name}</p>
+            </div>
+         
+   
+            <div>
+               <h3 className='infoTitle'>Location:</h3>
+               <p className='detailTxt'>   {character.location && character.location.name}</p>
+            </div>
+
+            <div>
+               <h3 className='infoTitle'>Episodes</h3>
+               <p className='detailTxt'> {character.episode && character.episode.length} </p> 
+            </div>
+
+      </div>  
+ 
+
+</div>
+      
+     
+      <Link to={`/home`} >
                <button className="btnNav">Return</button>
-         </Link>
+      </Link>
+                 
   </>
 
     

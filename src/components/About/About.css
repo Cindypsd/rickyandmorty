@@ -1,0 +1,39 @@
+.about{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3em;
+}
+
+
+.imgCindy{
+  width:30em;
+  height: 30em;
+  border-radius: 20em;
+  margin: 1.5em;
+}
+
+
+.aboutInfo{
+  display: flex;
+  flex-direction: row;
+ justify-content: center;
+}
+.aboutInfotxt{
+  background-color: rgba(255, 255, 255, 0.812);
+  border-radius: .5em;
+  padding: .7em;
+  width: 40em;
+}
+
+.aboutTxt{
+  font-weight: 600;
+  padding: .3em;
+  background-color: rgb(245, 238, 166);
+  border-radius: .5em;
+  margin-bottom: 2em ;
+}
+
+.txtBox{
+  margin-right: 3em;
+}

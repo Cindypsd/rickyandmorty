@@ -46,13 +46,19 @@ function App() {
 			</Route>
 
 			<Route path='/home'>
-				<img
-					className='Logo'
-					src={require('./images/logoTransparente.png')}
-					alt='Logo Ricky Morty'
-				></img>
 				<div>
-					<Cards characters={characters} onClose={onClose} />
+					{characters.length === 0 ? (
+						<img src={require('./images/Home.png')} alt='Imagen inicio'></img>
+					) : (
+						<div>
+							<img
+								className='Logo'
+								src={require('./images/logoTransparente.png')}
+								alt='Logo Ricky Morty'
+							></img>
+							<Cards characters={characters} onClose={onClose} />
+						</div>
+					)}
 				</div>
 			</Route>
 

@@ -1,45 +1,61 @@
-.detailCard{
-  width: 700px;
-  height: 700px;
-  border-radius: 30em;
-  /* background-color: rgba(174, 83, 234, 0.847); */
-  background-image: url(/src/images/Portal.png);
-  background-repeat: no-repeat;
+
+
+.detailBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1em;
+}
+
+.detailImgBox{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
-  padding-top: 1em;
+
+  width:500px;
+  height: 500px;
+  border-radius: 30em;
+  background-repeat: no-repeat;
+  margin-right: 1em;
 }
-
-.detailImg{
-  width:350px;
-  margin:0px;
-  border-radius: 1em;
-}
-
-
 
 .detailCharacterName{
   font-family: 'Cafe Francoise';
   font-size: 2.5em;
   margin: 0px;
+  color: aliceblue;
 }
 
-.detailCharacterName:hover,
-.detailCharacterInfo:hover
+.detailImg{
+  width:350px;
+  margin-top: 1em;
+  border-radius: 40em;
+}
+
+
+.detailCharacterName:hover
 {
   cursor: cell;
 transform: scale(1.1);
  transition: transform  1s;
- text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 42px #0fa, 0 0 82px #0fa,0 0 92px #0fa;
 }
 
-.detailCharacterInfo{
-  font-family:'Anonymous Pro';
-  background-color: rgb(222, 219, 45);
-  border-radius: .3em;
-  padding: .2em .9em;
 
+.infoTitle{
+  font-family: 'Cafe Francoise';
+  color: aliceblue;
 }
+
+.detailTxt{
+  font-weight: 600;
+  padding: .3em;
+  background-color: rgb(199, 216, 195);
+  border-radius: .5em;
+  margin-bottom: 2em ;
+}
+
+
+

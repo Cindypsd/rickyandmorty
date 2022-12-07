@@ -4,27 +4,29 @@
 }
 
 .btnNav{
+  font-family: 'IBM Plex Mono';
+  font-weight: 600;
   background-color: #ccc908;
   width: 80px;
   border-radius:.4em;
   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
   margin-bottom:.5em;
   margin-left:1em;
-  font-family:'Anonymous Pro';
   padding:.5em;}
 
 
   .btnNav:hover{
-    background-color: #e651c8;
+  background-color: #e651c8;
   }
 
   .btnRandom{
+  font-family: 'IBM Plex Mono';
+  font-weight: 600;
   background-color: #12cc08;
   border-radius:.4em;
   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
   margin: 0px;
   padding: .5em;
-  font-family:'Anonymous Pro';
   margin-right: 4em ;
   margin-left: 2em;
   }
