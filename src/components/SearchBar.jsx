@@ -13,11 +13,15 @@ export default function SearchBar(props) {
       );
    }
 
+   const randomId = Math.floor(Math.random() * 826);
 
    return (
       <div>
          <input onChange={handleInputChange}  type='search' />
          <button className='btnAgregar' onClick={()=>props.onSearch(character)}>Search</button>
+
+         <button className="btnRandom" onClick={()=>props.onSearch(randomId)} >Random Character</button>
+         
       </div>
    );
 }

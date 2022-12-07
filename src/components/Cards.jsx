@@ -15,17 +15,22 @@ export default function Cards(props) {
       return (
       <StyledDiv>
          {
-            characters.map(({name,species,gender,image,id},index)=>{
+
+   
+            characters.map(({name,species,gender,image,id},index)=>
+            {
                return <Card 
-                  key={index}
-                  name={name}
-                  species={species}
-                  gender={gender}
-                  image={image}
-                  id={id}
-                  onClose={props.onClose}
+               key={index}
+               name={name}
+               species={species}
+               gender={gender}
+               image={image}
+               id={id}
+               onClose={props.onClose}
                />
             })
+            
+            
          }
 
       </StyledDiv>)

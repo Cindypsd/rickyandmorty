@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
-import styled from "styled-components"
+// import styled from "styled-components"
 import SearchBar from "./SearchBar"
 import './css/Nav.css'
+// import RandomCard from "./RandomCard"
 
 
 export const Nav = ({onSearch}) => {
@@ -10,6 +11,7 @@ export const Nav = ({onSearch}) => {
   return (
     <div className="styleNav">
       <SearchBar onSearch={onSearch}/>
+
       <Link to={`/about`} >
            <button className="btnNav">About</button>
       </Link>
@@ -17,7 +19,6 @@ export const Nav = ({onSearch}) => {
            <button className="btnNav">Home</button>
       </Link>
 
-      
     </div >
   )
 }

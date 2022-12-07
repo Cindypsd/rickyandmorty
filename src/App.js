@@ -7,6 +7,7 @@ import { About } from './components/About.jsx';
 import { Detail } from './components/Detail.jsx';
 import { Route } from 'react-router';
 import { Form } from './components/Form.jsx';
+import { Error } from './components/Error.jsx';
 
 function App() {
 	const [characters, setCharacters] = useState([]);
@@ -16,6 +17,11 @@ function App() {
 			.then(response => response.json())
 			.then(data => {
 				if (data.name) {
+					for (let character of characters) {
+						if (data.id === character.id) {
+							return window.alert('REPETIDO');
+						}
+					}
 					setCharacters(oldChars => [...oldChars, data]);
 				} else {
 					window.alert('No hay personajes con ese ID');
@@ -34,12 +40,12 @@ function App() {
 			<Nav onSearch={onSearch} />
 
 			<Route exact path='/'>
-				<diV className='signBox'>
+				<div className='signBox'>
 					<Form />
-				</diV>
+				</div>
 			</Route>
 
-			<Route exact path='/home'>
+			<Route path='/home'>
 				<img
 					className='Logo'
 					src={require('./images/logoTransparente.png')}
@@ -55,8 +61,10 @@ function App() {
 			</Route>
 
 			<div className='divDetailCard'>
-				<Route path='/detail/:detailId' component={Detail} />
+				<Route exact path='/detail/:detailId' component={Detail} />
 			</div>
+
+			<Route path='*' element={<Error />} />
 		</div>
 	);
 }

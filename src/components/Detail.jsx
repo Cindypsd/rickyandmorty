@@ -35,12 +35,16 @@ export const Detail = () => {
   <>
       <div className='detailCard'>
 
-      <div className='detailCard'>
-            <h1 className='characterName'  >{character.name}</h1>
+      <div className='detailCharacter'>
+            <h1 className='detailCharacterName'  >{character.name}</h1>
             <img className='detailImg' src={character.image} alt="" /> 
       </div>
-            <h3>Estado: {character.status}</h3>
-            <h3>Especie: {character.species}</h3>
+
+      <div >
+            <h3 className='detailCharacterInfo'>Estado: {character.status} </h3>
+            
+            <h3 className='detailCharacterInfo'>  Especie: {character.species}</h3>
+      </div>
       </div>
           
 
