@@ -1,13 +1,13 @@
-import Cards from './components/Cards.jsx';
+import { Route } from 'react-router';
 //import characters from './data.js';
-import { Nav } from './components/Nav';
 import './App.css';
 import { useState } from 'react';
-import { About } from './components/About.jsx';
-import { Detail } from './components/Detail.jsx';
-import { Route } from 'react-router';
-import { Form } from './components/Form.jsx';
-import { Error } from './components/Error.jsx';
+import { Cards } from '../src/components/Cards/Cards';
+import { Nav } from '../src/components/Nav/Nav';
+import { About } from '../src/components/About/About';
+import { Detail } from '../src/components/Detail/Detail';
+import { Form } from '../src/components/Form/Form';
+import { Error } from '../src/components/Error/Error';
 
 function App() {
 	const [characters, setCharacters] = useState([]);

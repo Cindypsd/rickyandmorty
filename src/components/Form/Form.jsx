@@ -1,7 +1,7 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import './css/Form.css'
+import './Form.css'
 
 
 //const regexEmail = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/

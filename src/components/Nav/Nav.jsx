@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 // import styled from "styled-components"
-import SearchBar from "./SearchBar"
-import './css/Nav.css'
+import SearchBar from "../SearchBar/SearchBar"
+import './Nav.css'
 // import RandomCard from "./RandomCard"
 
 

@@ -1,4 +1,4 @@
-import Card from './Card';
+import Card from '../Card/Card';
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
 `
 
 
-export default function Cards(props) {
+export function Cards(props) {
    const { characters } = props;
 
       return (
