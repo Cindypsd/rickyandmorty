@@ -1,4 +1,3 @@
-import { Route, useHistory } from 'react-router';
 import './App.css';
 import { useState } from 'react';
 import { Cards } from '../src/components/Cards/Cards';
@@ -6,30 +5,12 @@ import { Nav } from '../src/components/Nav/Nav';
 import { About } from '../src/components/About/About';
 import { Detail } from '../src/components/Detail/Detail';
 import { Form } from '../src/components/Form/Form';
-//import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import { Route, Routes, useLocation } from 'react-router-dom';
 // import { Error } from '../src/components/Error/Error';
 
 function App() {
+	let location = useLocation();
 	const [characters, setCharacters] = useState([]);
-	const [access, setAccess] = useState(false);
-
-	//const navigate = useNavigate();
-	const history = useHistory();
-
-	let username = 'cindy@gmail.com';
-	let password = 'Hola123!';
-
-	const login = userData => {
-		if (userData.password === password && userData.username === username) {
-			setAccess(true);
-			history.push('/home');
-		}
-	};
-
-	useEffect(() => {
-		!access && history.push('/');
-	}, [access, history]);
 
 	function onSearch(character) {
 		fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -38,7 +19,7 @@ function App() {
 				if (data.name) {
 					for (let character of characters) {
 						if (data.id === character.id) {
-							return window.alert('REPETIDO');
+							return window.alert('Ya tienes ese personaje, intenta de nuevo');
 						}
 					}
 					setCharacters(oldChars => [...oldChars, data]);
@@ -56,37 +37,36 @@ function App() {
 
 	return (
 		<div className='App' style={{ padding: '25px' }}>
-			<Route exact path='/'>
-				<div className='signBox'>
-					<Form login={login} />
-				</div>
-			</Route>
+			{location.pathname === '/' ? <Form /> : null}
+			{location.pathname === '/' ? null : <Nav onSearch={onSearch} />}
 
-			<Route exact path='/home'>
-				<Nav onSearch={onSearch} />
-				<div>
-					{characters.length === 0 ? (
-						<img src={require('./images/Home2.png')} alt='Imagen inicio'></img>
-					) : (
-						<div>
+			<Routes>
+				<Route
+					exact
+					path='/home'
+					element={
+						characters.length === 0 ? (
 							<img
-								className='Logo'
-								src={require('./images/logoTransparente.png')}
-								alt='Logo Ricky Morty'
+								src={require('./images/Home2.png')}
+								alt='Imagen inicio'
 							></img>
-							<Cards characters={characters} onClose={onClose} />
-						</div>
-					)}
-				</div>
-			</Route>
+						) : (
+							<div>
+								<img
+									className='Logo'
+									src={require('./images/logoTransparente.png')}
+									alt='Logo Ricky Morty'
+								></img>
+								<Cards characters={characters} onClose={onClose} />
+							</div>
+						)
+					}
+				/>
 
-			<Route exact path='/about' component={About} />
+				<Route exact path='/about' element={<About />} />
 
-			<div className='divDetailCard'>
-				<Route exact path='/detail/:detailId' component={Detail} />
-			</div>
-
-			{/* <Route path='*' component={Error} /> */}
+				<Route exact path='/detail/:detailId' element={<Detail />} />
+			</Routes>
 		</div>
 	);
 }
