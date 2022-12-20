@@ -47,6 +47,8 @@ export function Form(props) {
 
 
   return (
+
+    <>
     <div className={style.signInBox}>
 
 
@@ -60,23 +62,33 @@ export function Form(props) {
  
         <div>
             <label className={style.labelText} htmlFor='username' >Username: </label>
-            <input name='username' value={userData.username} onChange={handleChange}/>
-            <p>{errors.username}</p>
+            <input name='username' value={userData.username} onChange={handleChange} className={errors.username && style.error}/>
+            
         </div>
 
         <div>
             <label className={style.labelText} htmlFor='password'>Password: </label>
-            <input name='password' value={userData.password} onChange={handleChange}/>
-            <p>{errors.password}</p>
+            <input name='password' value={userData.password} onChange={handleChange} className={errors.password && style.error}/>
+            
         </div>
         
         <div>
-            <button className='btnSignIn' type='submit'>Login</button>
+            <button className={style.btnLog} type='submit'>Login</button>
         </div>
 
       </form>
 
      </div>
+
     </div>
+
+    <div className={errors.username || errors.password ? style.errorTextContainer:null}>
+
+    <p>{errors.username}</p>
+    <p>{errors.password}</p>
+
+    </div>
+   
+   </>
   )
 }

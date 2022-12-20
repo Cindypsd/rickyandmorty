@@ -37,6 +37,8 @@ function App() {
 
 	return (
 		<div className='App' style={{ padding: '25px' }}>
+
+			
 			{location.pathname === '/' ? <Form /> : null}
 			{location.pathname === '/' ? null : <Nav onSearch={onSearch} />}
 
