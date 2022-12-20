@@ -1,12 +1,17 @@
 
 
 .detailBox{
+  background-color: rgba(68, 204, 159, 0.803);
+  border: rgba(255, 255, 255, 0.814) solid 7px;
+  border-radius: .5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding-top: 1em;
+  padding-right: 3em;
+  
 }
 
 .detailImgBox{
@@ -63,6 +68,7 @@ transform: scale(1.1);
 }
 
 .detailTxt{
+ 
   font-weight: 600;
   padding: .3em;
   background-color: rgb(199, 216, 195);
