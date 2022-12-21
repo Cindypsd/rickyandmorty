@@ -6,11 +6,15 @@ import { About } from '../src/components/About/About';
 import { Detail } from '../src/components/Detail/Detail';
 import { Form } from '../src/components/Form/Form';
 import { Route, Routes, useLocation } from 'react-router-dom';
+import  Favorites  from './components/Favorites/Favorites';
+
 // import { Error } from '../src/components/Error/Error';
 
 function App() {
 	let location = useLocation();
 	const [characters, setCharacters] = useState([]);
+
+	
 
 	function onSearch(character) {
 		fetch(`https://rickandmortyapi.com/api/character/${character}`)
@@ -64,6 +68,8 @@ function App() {
 						)
 					}
 				/>
+
+				<Route exact path='/favorites' element={<Favorites />} />
 
 				<Route exact path='/about' element={<About />} />
 

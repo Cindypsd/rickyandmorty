@@ -1,6 +1,5 @@
 div{
   margin-bottom:.8em;
-  
 }
 
 
@@ -18,6 +17,19 @@ font-family: 'IBM Plex Mono';
    .btnAgregar:hover{
       background-color: #15cebe;
    }
+
+.btnFavorites{
+   font-family: 'IBM Plex Mono';
+  font-weight: 600;
+   background-color: #a2f9a5;
+   width: 120px;
+   border-radius:.4em;
+   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
+   margin-bottom:.5em;
+   margin-left:1em;
+   margin-right:8em;
+   padding:.5em;}
+
 
 
 input{
