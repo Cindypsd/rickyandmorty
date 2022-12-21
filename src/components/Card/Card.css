@@ -1,12 +1,10 @@
 
 
-.divCard {
-   box-shadow: 0 8px 16px 0 #17ff0f33, 0 6px 20px 0 rgba(0,0,0,0.19); 
+.divCard { 
    border-radius: 2em;
    width: 320px;
-   height: 550px;
+   height: 500px;
    background-color: #dff251ee;
-   box-shadow: 0px 0px 8px rgb(8, 241, 86);
    margin: 1em;
    overflow: hidden;
 }
@@ -21,25 +19,34 @@
   
 }
 
+.divCard p{
+   color:#2e2d2d;
+   font-weight: 600;
+   font-size: 1em;
+}
+
 .botonDelete{
    background-color: #54ea60;
    width:35px;
    height: 30px;
    border-radius:.4em;
-   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
+   
    margin-bottom:.3em;
    margin-top: 1em;
    }
 
    .btnFavorite{
-      background-color: #ea549d;
+      background-color: #f9b5e2;
       width:35px;
       height: 30px;
       border-radius:.4em;
-      box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
       margin-bottom:.3em;
       margin-top: 1em;
       margin-right: .5em;
+   }
+
+   .btnFavorite:visited{
+      background-color: #040404;
    }
 
 .characterImg {
@@ -63,13 +70,3 @@
   cursor: cell;
    }
 
-.characterInfo {
-   display:flex;
-   flex-direction: row;
-   justify-content:center;
-   font-family: 'IBM Plex Mono';
-  font-weight: 600;
-   margin:auto;
-   color: #4b4a4a ;
-   font-size: .9em;
-}

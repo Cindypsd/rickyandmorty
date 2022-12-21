@@ -21,7 +21,7 @@ function Favorites(props) {
                 <Link style={{ textDecoration: 'none' }} to={`/detail/${character.id}`} >
                 <h1 className="favName">{character.name}</h1>
                 </Link>
-                <p>Click the name for more info</p>
+                {/* <p>Click the name for more info</p> */}
             </div>    
        ) )}
        </div>

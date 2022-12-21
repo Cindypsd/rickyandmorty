@@ -39,10 +39,12 @@ import './Card.css'
          <Link style={{ textDecoration: 'none' }} to={`/detail/${props.id}`} >
             <h1 className="characterName">{props.name}</h1>
          </Link>
+
          
-         <div className="characterInfo">
-            <h3>Especie: {props.species} | Género: {props.gender} </h3>
-         </div>
+            <p>{props.gender} </p>
+       
+       
+         
 
          <div className='btnsCard'>
 
