@@ -10,7 +10,7 @@ export function Form(props) {
   const navigate = useNavigate();
   const [access, setAccess] = React.useState(false);
   const username = 'ejemplo@gmail.com';
-  const password = '1password';
+  const password = '1234567p';
 
   function login(userData) {
    if (userData.password === password && userData.username === username) {
@@ -62,13 +62,14 @@ export function Form(props) {
  
         <div>
             <label className={style.labelText} htmlFor='username' >Username: </label>
-            <input name='username' value={userData.username} onChange={handleChange} className={errors.username && style.error}/>
+            <input name='username' value={userData.username} onChange={handleChange} className={errors.username && style.error} autoComplete='off'/>
             
         </div>
 
         <div>
             <label className={style.labelText} htmlFor='password'>Password: </label>
-            <input name='password' value={userData.password} onChange={handleChange} className={errors.password && style.error}/>
+            <input name='password'
+            type='password' value={userData.password} onChange={handleChange} className={errors.password && style.error} autoComplete='off'/>
             
         </div>
         

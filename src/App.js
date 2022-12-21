@@ -8,8 +8,6 @@ import { Form } from '../src/components/Form/Form';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import  Favorites  from './components/Favorites/Favorites';
 
-// import { Error } from '../src/components/Error/Error';
-
 function App() {
 	let location = useLocation();
 	const [characters, setCharacters] = useState([]);
@@ -45,6 +43,7 @@ function App() {
 			
 			{location.pathname === '/' ? <Form /> : null}
 			{location.pathname === '/' ? null : <Nav onSearch={onSearch} />}
+				
 
 			<Routes>
 				<Route
