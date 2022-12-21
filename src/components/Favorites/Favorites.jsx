@@ -13,6 +13,13 @@ function Favorites(props) {
     
     return (
         <> 
+
+        <img
+            className='imgFavoritetitle'
+						src={require('../../images/FavoriteTitle.png')}
+						alt='My Favorite Characters'
+				></img>
+
        <div className="favoritesContainer">
        {props.myFavorites?.map( character => (
 

@@ -1,3 +1,8 @@
+.imgFavoritetitle{
+  margin-top: 2em;
+  width: 500px;
+}
+
 .favoritesContainer{
   display: flex;
    justify-content:space-evenly;
