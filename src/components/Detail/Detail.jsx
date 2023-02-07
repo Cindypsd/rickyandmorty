@@ -37,8 +37,8 @@ export const Detail = () => {
          
       
          <div className='detailImgBox'>
-            <h1 className='detailCharacterName'  >{character.name}</h1>
             <img className='detailImg' src={character.image} alt="" /> 
+            <h1 className='detailCharacterName'  >{character.name}</h1>
          </div>
       
 

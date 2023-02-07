@@ -73,9 +73,21 @@
   width: 80px;
   border-radius:.4em;
   box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
-  margin-bottom:.5em;
   margin-left:1em;
   padding:.5em;}
+
+  .btnGuest{
+  font-family: 'IBM Plex Mono';
+  font-weight: 600;
+  font-size: 15px;
+  width: 230px;
+  background-color: #34d8b2;
+  border-radius:.4em;
+  box-shadow: 0 3px 3px 0 #10b7323d, 0 17px 50px 0 rgba(0,0,0,0.19);
+  margin-top:.3em;
+  margin-left:1em;
+  padding:.5em;}
+  
 
   .errorTextContainer{
     padding: .5em;

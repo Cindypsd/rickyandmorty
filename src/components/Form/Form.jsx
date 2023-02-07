@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { validate } from './Validations';
 import style from './Form.module.css'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 
@@ -76,7 +76,9 @@ export function Form(props) {
         <div>
             <button className={style.btnLog} type='submit'>Login</button>
         </div>
-
+        <Link to={`/home`} >
+          <button className={style.btnGuest}>Continue as a guest</button>
+        </Link>
       </form>
 
      </div>
