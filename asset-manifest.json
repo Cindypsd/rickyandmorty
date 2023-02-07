@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/rickyandmorty/static/css/main.c219662a.css",
+    "main.js": "/rickyandmorty/static/js/main.25e45444.js",
+    "static/media/CindyPsd.png": "/rickyandmorty/static/media/CindyPsd.ce70e5905571352a4976.png",
+    "static/media/background-img.png": "/rickyandmorty/static/media/background-img.6daedb0803fc39199564.png",
+    "static/media/rick-and-morty-31013.png": "/rickyandmorty/static/media/rick-and-morty-31013.eac981a1b21837bda9c9.png",
+    "static/media/Home2.png": "/rickyandmorty/static/media/Home2.b340545114bf569b96e4.png",
+    "static/media/logoTransparente.png": "/rickyandmorty/static/media/logoTransparente.3ca11aba93e458352f4b.png",
+    "static/media/CindyPosada.png": "/rickyandmorty/static/media/CindyPosada.cebdb491e280aa066fff.png",
+    "static/media/FavoriteTitle.png": "/rickyandmorty/static/media/FavoriteTitle.4b6377b88c554919154e.png",
+    "index.html": "/rickyandmorty/index.html",
+    "main.c219662a.css.map": "/rickyandmorty/static/css/main.c219662a.css.map",
+    "main.25e45444.js.map": "/rickyandmorty/static/js/main.25e45444.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c219662a.css",
+    "static/js/main.25e45444.js"
+  ]
+}
